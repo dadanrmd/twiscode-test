@@ -1,0 +1,10 @@
+SELECT 
+    a.id,
+    a.status,
+    a.tanggal_pembayaran,
+    b.subtotal as total,
+    b.jumlah as jumlah_barang
+FROM 
+    transactions a INNER JOIN 
+    transaction_details b ON 
+    a.id=b.id_transaksi;
